@@ -124,7 +124,7 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: http://webdriver.io/guide/reporters/dot.html
-    reporters: ['spec','cucumber','junit','allure'],
+    reporters: ['spec','allure','cucumber','junit'],
     reporterOptions: {
         outputDir: './reports/json/',
         junit: {
@@ -132,6 +132,9 @@ exports.config = {
             outputFileFormat: function(opts) { // optional 
                 return `results-${opts.cid}.${opts.capabilities}.xml`
             }
+        },
+        allure: {
+            outputDir: 'allure-results'
         }
     },
     //
