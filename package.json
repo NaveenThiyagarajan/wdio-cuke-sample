@@ -1,0 +1,31 @@
+{
+  "name": "wdio_cuke_sample",
+  "version": "1.0.0",
+  "description": "This contains the wdio with cuke training samples",
+  "main": "index.js",
+  "scripts": {
+    "test": "wdio",
+    "allure-report": "allure generate --clean allure-results && allure open allure-report",
+    "cuke-report":"./node_modules/.bin/cucumberjs ./features -r ./stepDefinitions -f summary -f json:reports/json/cucumber_report.json",
+    "junit-report":"./node_modules/.bin/junit-viewer --results=./reports/junit-results --save=junit-results.html && open junit-results.html",
+    "wdio-test":"node_modules/.bin/wdio test/wdio.conf.js"
+  },
+  "author": "Naveen",
+  "license": "ISC",
+  "devDependencies": {
+    "allure-commandline": "^2.4.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "cucumber": "^3.2.0",
+    "cucumber-html-reporter": "^3.0.4",
+    "express": "^4.16.2",
+    "wdio-allure-reporter": "^0.1.2",
+    "wdio-cucumber-framework": "^1.0.2",
+    "wdio-cucumber-reporter": "0.0.2",
+    "wdio-json-reporter": "^0.3.1",
+    "wdio-junit-reporter": "^0.3.1",
+    "wdio-selenium-standalone-service": "0.0.9",
+    "wdio-spec-reporter": "^0.1.3",
+    "webdriverio": "^4.9.11"
+  }
+}
