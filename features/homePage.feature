@@ -1,6 +1,6 @@
 Feature: Veriry the timeline page of e app
 
-@e_Login
+@1e_Login
 Scenario: Timeline page on the app
     Given The DIT URL open it on the chrome browser
     When All the login options are loaded

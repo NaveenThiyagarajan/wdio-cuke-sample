@@ -1,4 +1,5 @@
 module.exports.verifyAppLoaded = function(){
+    browser.waitForExist("//nav/ul/li",10000);
     var isThere = browser.isExisting("//nav/ul/li");
     console.log("Is Present: " + isThere);
     if(isThere){

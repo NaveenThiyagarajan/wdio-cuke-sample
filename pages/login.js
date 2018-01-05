@@ -22,16 +22,20 @@ module.exports.clickGoogleToLogin = function(){
     console.log('Google+ clicked')
     //browser.click('div=Use another account');
     console.log('Use another accunt clicked')
-    browser.pause(2000)
+    //browser.pause(2000)
+    browser.waitForExist('[type="email"]',4000);
     browser.setValue('[type="email"]', "c.vanhorn1111");
     console.log("emialID entered")
     browser.click('span=Next');
-    browser.pause(2000)
     console.log("Next is clicke in emailID page")
+    console.log("entering pause");
+    browser.waitForEnabled('[type="password"]',4000);
+    //browser.pause(2000)
+    
     browser.setValue('[type="password"]','adpadp01');
     console.log("Password is sent");
     browser.click('span=Next');
-    browser.pause(10000);
+    //browser.pause(10000);
 };
 
 module.exports.verifyLoginPage = function(){
