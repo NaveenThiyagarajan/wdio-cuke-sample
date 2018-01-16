@@ -32,7 +32,7 @@ module.exports.clickGoogleToLogin = function(){
     browser.waitForEnabled('[type="password"]',4000);
     //browser.pause(2000)
     
-    browser.setValue('[type="password"]','adpadp01');
+    browser.setValue('[type="password"]','XXXXXXXX');
     console.log("Password is sent");
     browser.click('span=Next');
     //browser.pause(10000);
